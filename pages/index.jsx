@@ -6,7 +6,7 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 export default function Home() {
   const [switchMode, setSwitchMode] = useState(true);
 
-  const [isDarkMode, setDarkMode] = useState(false);
+  const [isDarkMode, setDarkMode] = useState(true);
 
   const toggleDarkMode = (checked) => {
     setDarkMode(checked);
