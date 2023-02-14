@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap");
+:root {
+  --mainTextColor-light: #000;
+  --secondaryTextColor-light: rgb(51 51 51);
+  --mainLinkColor-light: #0da2b8;
+  --mainBorderColor-light: rgb(218, 218, 218);
+  --mainBgColor-light: rgb(249, 250, 251);
+
+  --mainTextColor-dark: #fff;
+  --secondaryTextColor-dark: #adb0b1;
+  --mainLinkColor-dark: rgb(30, 190, 214);
+  --mainBorderColor-dark: #2b3031;
+  --mainBgColor-dark: #131415;
+
+  --mainTextColor: var(--mainTextColor-dark);
+  --secondaryTextColor: var(--secondaryTextColor-dark);
+  --mainLinkColor: var(--mainLinkColor-dark);
+  --mainBorderColor: var(--mainBorderColor-dark);
+  --mainBgColor: var(--mainBgColor-dark);
+}
+.dark-theam {
+  --mainTextColor: var(--mainTextColor-light);
+  --secondaryTextColor: var(--secondaryTextColor-light);
+  --mainLinkColor: var(--mainLinkColor-light);
+  --mainBorderColor: var(--mainBorderColor-light);
+  --mainBgColor: var(--mainBgColor-light);
+}
+
+* {
+  margin:0;
+  padding: 0;
+  font-family: Readex Pro;
+  line-height: 1.5em;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--mainBgColor);
+  color: var(--mainTextColor);
+
+}
+li span p {
+  color: var(--secondaryTextColor);
+  font-size: 1.5em;
+}
+a {
+  text-decoration: none;
+  color: var(--mainLinkColor);
+  font-weight: 500;
+}
+li {
+  line-height: 1.9em;
+}
+#container--main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1em;
+}
+.section-page {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4em;
+}
+#user-name {
+  font-size: 2em;
+}
+
+#bio a {
+  font-weight: 300;
+}
+#profile-pic {
+  border-radius: 30% 74%;
+  height: 300px;
+  width: 308.2px;
+  object-fit: scale-down;
+  background-position: center center;
+  transition: transform 0.2s; /* Animation */
+}
+#profile-pic:hover {
+  transform: scale(
+    1.2
+  );
+}
+#email {
+  margin-top:10px;
+}
+
+#socials--list {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1em;
+  flex-wrap: wrap;
+}
+#socials--list a {
+  font-weight: 300;
+  color: var(--secondaryTextColor);
+  font-size: 0.9em;
+  transition: 0.3s;
+}
+
+#socials--list a:hover {
+  font-weight: 1000;
+  color: var(--mainLinkColor);
+  font-size: 0.9em;
+}
+#qualifications--list {
+  list-style: none;
+}
+
+.toggle {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 32px;
+  right: 122px;
+}
+
+#techstack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  font-size: 0.9em;
+}
+
+.card {
+  border: 1px solid var(--mainBorderColor);
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  align-items: center;
+}
+
+.project {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: 1px solid var(--mainBorderColor);
+}
+
+.project a {
+  color: #adb0b1;
+  transition: 0.3s;
+}
+
+.project a:hover {
+  color: rgb(30, 190, 214);
+}
+
+.work-history {
+  border-left: 1px solid var(--mainBorderColor);
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding-left: 2em;
+}
+
+.line-break {
+  background-color: var(--mainBorderColor);
+  height: 1px;
+}
+
+@media (max-width: 600px) {
+  .section--page {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  #wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
+  #profile-pic {
+    width: 100%;
+    height: 100%;
+  }
+
+  #wrapper {
+    flex-direction: column;
+  }
+
+  .work-history {
+    border-left: none;
+    padding-left: 0;
+  }
+}
